@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String        @id @default(uuid())
+  email         String        @unique
+  password      String?       // Optionnel pour permettre les réservations sans inscription
+  firstName     String
+  lastName      String
+  phoneNumber   String?
+  role          Role          @default(USER)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  reservations  Reservation[]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model Property {
+  id             String        @id @default(uuid())
+  name           String
+  description    String
+  capacity       Int
+  pricePerNight  Float
+  images         String[]
+  amenities      String[]
+  isAvailable    Boolean       @default(true)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  reservations   Reservation[]
+}
+
+model Reservation {
+  id               String            @id @default(uuid())
+  startDate        DateTime
+  endDate          DateTime
+  numberOfGuests   Int
+  specialRequests  String?
+  totalPrice       Float
+  depositAmount    Float             // Montant de l'acompte
+  depositPaid      Boolean           @default(false)
+  stripePaymentId  String?           // ID du paiement Stripe
+  status           ReservationStatus @default(PENDING)
+  confirmationCode String            @unique @default(uuid()) // Code de confirmation pour les réservations sans inscription
+  guestEmail       String            // Email du client (même pour les non-inscrits)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  userId           String?           // Optionnel pour permettre les réservations sans inscription
+  user             User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
+  propertyId       String
+  property         Property          @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+model SiteConfig {
+  id                String  @id @default("default")
+  singlePropertyMode Boolean @default(false)
+  mainPropertyId    String?
+}

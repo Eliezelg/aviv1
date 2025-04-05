@@ -1,0 +1,79 @@
+{
+  "common": {
+    "back_to_home": "Zurück zur Startseite",
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg"
+  },
+  "navbar": {
+    "home": "Startseite",
+    "properties": "Immobilien",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "my_reservations": "Meine Reservierungen",
+    "the_villa": "Die Villa",
+    "rooms": "Zimmer",
+    "amenities": "Ausstattung",
+    "activities": "Aktivitäten"
+  },
+  "property": {
+    "available": "Verfügbar",
+    "unavailable": "Nicht verfügbar",
+    "capacity": "Kapazität",
+    "price_per_night": "€ / Nacht",
+    "description": "Beschreibung",
+    "amenities": "Ausstattung",
+    "book_now": "Jetzt buchen",
+    "view_details": "Details anzeigen",
+    "no_properties": "Keine Immobilien verfügbar",
+    "no_properties_desc": "Derzeit sind keine Immobilien verfügbar.",
+    "special_requests": "Besondere Wünsche",
+    "nights": "Nacht(e)",
+    "persons": "Person(en)",
+    "total_price": "Gesamtpreis",
+    "deposit": "Anzahlung",
+    "paid": "Bezahlt",
+    "pending": "Ausstehend"
+  },
+  "reservation": {
+    "book_property": "Immobilie buchen",
+    "complete_form": "Füllen Sie das Formular aus, um Ihre Reservierung vorzunehmen",
+    "reservation_details": "Reservierungsdetails",
+    "dates": "Daten",
+    "guests": "Gäste",
+    "confirmation_code": "Bestätigungscode",
+    "reservation_confirmed": "Reservierung bestätigt!",
+    "payment_failed": "Zahlung fehlgeschlagen",
+    "reservation_pending": "Reservierung wartet auf Zahlung",
+    "confirmed_description": "Ihre Reservierung wurde erfolgreich registriert und Ihre Anzahlung wurde bezahlt.",
+    "failed_description": "Ihre Anzahlung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "pending_description": "Ihre Reservierung wurde registriert, wartet aber noch auf die Anzahlung.",
+    "reference": "Referenz",
+    "status": {
+      "pending": "Ausstehend",
+      "confirmed": "Bestätigt",
+      "cancelled": "Storniert",
+      "completed": "Abgeschlossen"
+    },
+    "email_sent": "Eine Bestätigungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet. Sie können Ihre Reservierungen jederzeit mit Ihrer E-Mail und dem Bestätigungscode überprüfen.",
+    "pay_deposit": "Anzahlung bezahlen",
+    "view_my_reservations": "Meine Reservierungen anzeigen",
+    "back_to_home": "Zurück zur Startseite",
+    "cancel_reservation": "Stornieren",
+    "reservation_cancelled": "Reservierung storniert",
+    "reservation_cancelled_desc": "Ihre Reservierung wurde erfolgreich storniert"
+  },
+  "guest_access": {
+    "title": "Zugriff auf Ihre Reservierungen",
+    "description": "Geben Sie Ihre E-Mail und den bei der Reservierung erhaltenen Bestätigungscode ein",
+    "email": "E-Mail",
+    "email_hint": "Ihre E-Mail-Adresse",
+    "confirmation_code": "Bestätigungscode",
+    "code_hint": "Sie haben diesen Code per E-Mail während Ihrer Reservierung erhalten",
+    "access_button": "Auf meine Reservierungen zugreifen",
+    "no_reservations": "Keine Reservierungen",
+    "no_reservations_desc": "Für diese E-Mail wurden keine Reservierungen gefunden.",
+    "reservations_for": "Reservierungen für",
+    "logout": "Abmelden"
+  }
+}
