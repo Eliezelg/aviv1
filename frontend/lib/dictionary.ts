@@ -78,6 +78,15 @@ interface Dictionary {
     reservations_for: string;
     logout: string;
   };
+  gallery: {
+    title: string;
+    description: string;
+    images: Array<{
+      thumbnail: string;
+      full: string;
+      alt: string;
+    }>;
+  };
 }
 
 const dictionaries: Record<string, () => Promise<Dictionary>> = {

@@ -1,0 +1,85 @@
+{
+  "common": {
+    "back_to_home": "Back to home",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "view_properties": "View our properties",
+    "learn_more": "Learn more"
+  },
+  "home": {
+    "hero_description": "A selection of exceptional properties for your stays.",
+    "features_title": "Our Amenities"
+  },
+  "navbar": {
+    "home": "Home",
+    "properties": "Properties",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "my_reservations": "My Reservations",
+    "the_villa": "The Villa",
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "activities": "Activities"
+  },
+  "property": {
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "capacity": "Capacity",
+    "price_per_night": "€ / night",
+    "description": "Description",
+    "amenities": "Amenities",
+    "book_now": "Book Now",
+    "view_details": "View Details",
+    "no_properties": "No properties available",
+    "no_properties_desc": "No properties are currently available.",
+    "special_requests": "Special Requests",
+    "nights": "night(s)",
+    "persons": "person(s)",
+    "total_price": "Total Price",
+    "deposit": "Deposit",
+    "paid": "Paid",
+    "pending": "Pending"
+  },
+  "reservation": {
+    "book_property": "Book Property",
+    "complete_form": "Complete the form below to make your reservation",
+    "reservation_details": "Reservation Details",
+    "dates": "Dates",
+    "guests": "Guests",
+    "confirmation_code": "Confirmation Code",
+    "reservation_confirmed": "Reservation Confirmed!",
+    "payment_failed": "Payment Failed",
+    "reservation_pending": "Reservation Pending Payment",
+    "confirmed_description": "Your reservation has been successfully registered and your deposit has been paid.",
+    "failed_description": "Your deposit payment has failed. Please try again.",
+    "pending_description": "Your reservation has been registered but is pending deposit payment.",
+    "reference": "Reference",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    },
+    "email_sent": "A confirmation email has been sent to your email address. You can also check your reservations at any time using your email and confirmation code.",
+    "pay_deposit": "Pay Deposit",
+    "view_my_reservations": "View My Reservations",
+    "back_to_home": "Back to Home",
+    "cancel_reservation": "Cancel",
+    "reservation_cancelled": "Reservation Cancelled",
+    "reservation_cancelled_desc": "Your reservation has been successfully cancelled"
+  },
+  "guest_access": {
+    "title": "Access Your Reservations",
+    "description": "Enter your email and the confirmation code received during your reservation",
+    "email": "Email",
+    "email_hint": "Your email address",
+    "confirmation_code": "Confirmation Code",
+    "code_hint": "You received this code by email during your reservation",
+    "access_button": "Access My Reservations",
+    "no_reservations": "No Reservations",
+    "no_reservations_desc": "No reservations were found for this email.",
+    "reservations_for": "Reservations for",
+    "logout": "Logout"
+  }
+}

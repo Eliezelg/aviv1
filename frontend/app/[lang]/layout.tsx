@@ -11,18 +11,22 @@ export const metadata: Metadata = {
   description: 'Discover Villa Aviv, a spacious 1000m² luxury villa in Diemeringen, France. Perfect for groups up to 50 people, featuring indoor pool, cinema, and more.',
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params
 }: {
   children: React.ReactNode;
   params: { lang: string };
 }) {
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+
   return (
     <div className={inter.className}>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
         <div className="container py-3">
-          <Navbar />
+          <Navbar lang={lang} />
         </div>
       </header>
       <main>
@@ -40,24 +44,24 @@ export default function LocaleLayout({
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-semibold">Liens</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <a href={`/${params.lang}`} className="hover:underline">Accueil</a>
-                <a href={`/${params.lang}/properties`} className="hover:underline">Propriétés</a>
-                <a href={`/${params.lang}/galerie`} className="hover:underline">Galerie</a>
-                <a href={`/${params.lang}/contact`} className="hover:underline">Contact</a>
+                <a href={`/${lang}`} className="hover:underline">Accueil</a>
+                <a href={`/${lang}/properties`} className="hover:underline">Propriétés</a>
+                <a href={`/${lang}/galerie`} className="hover:underline">Galerie</a>
+                <a href={`/${lang}/contact`} className="hover:underline">Contact</a>
               </nav>
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-semibold">Réservations</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <a href={`/${params.lang}/reservation/guest`} className="hover:underline">Accès invité</a>
-                <a href={`/${params.lang}/properties`} className="hover:underline">Réserver maintenant</a>
+                <a href={`/${lang}/reservation/guest`} className="hover:underline">Accès invité</a>
+                <a href={`/${lang}/properties`} className="hover:underline">Réserver maintenant</a>
               </nav>
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-sm font-semibold">Légal</h3>
               <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <a href={`/${params.lang}/mentions-legales`} className="hover:underline">Mentions légales</a>
-                <a href={`/${params.lang}/confidentialite`} className="hover:underline">Politique de confidentialité</a>
+                <a href={`/${lang}/mentions-legales`} className="hover:underline">Mentions légales</a>
+                <a href={`/${lang}/confidentialite`} className="hover:underline">Politique de confidentialité</a>
               </nav>
             </div>
           </div>

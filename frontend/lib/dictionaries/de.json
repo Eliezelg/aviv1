@@ -3,7 +3,13 @@
     "back_to_home": "Zurück zur Startseite",
     "loading": "Wird geladen...",
     "error": "Fehler",
-    "success": "Erfolg"
+    "success": "Erfolg",
+    "view_properties": "Unsere Immobilien ansehen",
+    "learn_more": "Mehr erfahren"
+  },
+  "home": {
+    "hero_description": "Eine Auswahl an außergewöhnlichen Immobilien für Ihren Aufenthalt.",
+    "features_title": "Unsere Ausstattung"
   },
   "navbar": {
     "home": "Startseite",
@@ -64,16 +70,37 @@
     "reservation_cancelled_desc": "Ihre Reservierung wurde erfolgreich storniert"
   },
   "guest_access": {
-    "title": "Zugriff auf Ihre Reservierungen",
+    "title": "Auf Ihre Reservierungen zugreifen",
     "description": "Geben Sie Ihre E-Mail und den bei der Reservierung erhaltenen Bestätigungscode ein",
     "email": "E-Mail",
     "email_hint": "Ihre E-Mail-Adresse",
     "confirmation_code": "Bestätigungscode",
-    "code_hint": "Sie haben diesen Code per E-Mail während Ihrer Reservierung erhalten",
+    "code_hint": "Sie haben diesen Code während Ihrer Reservierung per E-Mail erhalten",
     "access_button": "Auf meine Reservierungen zugreifen",
     "no_reservations": "Keine Reservierungen",
     "no_reservations_desc": "Für diese E-Mail wurden keine Reservierungen gefunden.",
     "reservations_for": "Reservierungen für",
     "logout": "Abmelden"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "description": "Entdecken Sie unsere Bildersammlung von unseren außergewöhnlichen Immobilien",
+    "images": [
+      {
+        "thumbnail": "/images/gallery/villa-1-thumb.jpg",
+        "full": "/images/gallery/villa-1.jpg",
+        "alt": "Außenansicht der Villa"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-2-thumb.jpg",
+        "full": "/images/gallery/villa-2.jpg",
+        "alt": "Hallenbad"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-3-thumb.jpg",
+        "full": "/images/gallery/villa-3.jpg",
+        "alt": "Geräumiges Wohnzimmer"
+      }
+    ]
   }
 }

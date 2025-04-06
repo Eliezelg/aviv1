@@ -3,7 +3,13 @@
     "back_to_home": "Back to home",
     "loading": "Loading...",
     "error": "Error",
-    "success": "Success"
+    "success": "Success",
+    "view_properties": "View our properties",
+    "learn_more": "Learn more"
+  },
+  "home": {
+    "hero_description": "A selection of exceptional properties for your stays.",
+    "features_title": "Our Amenities"
   },
   "navbar": {
     "home": "Home",
@@ -64,16 +70,37 @@
     "reservation_cancelled_desc": "Your reservation has been successfully cancelled"
   },
   "guest_access": {
-    "title": "Access Your Reservations",
+    "title": "Access your reservations",
     "description": "Enter your email and the confirmation code received during your reservation",
     "email": "Email",
     "email_hint": "Your email address",
-    "confirmation_code": "Confirmation Code",
+    "confirmation_code": "Confirmation code",
     "code_hint": "You received this code by email during your reservation",
-    "access_button": "Access My Reservations",
-    "no_reservations": "No Reservations",
+    "access_button": "Access my reservations",
+    "no_reservations": "No reservations",
     "no_reservations_desc": "No reservations were found for this email.",
     "reservations_for": "Reservations for",
-    "logout": "Logout"
+    "logout": "Log out"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "Discover our collection of images from our exceptional properties",
+    "images": [
+      {
+        "thumbnail": "/images/gallery/villa-1-thumb.jpg",
+        "full": "/images/gallery/villa-1.jpg",
+        "alt": "Exterior view of the villa"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-2-thumb.jpg",
+        "full": "/images/gallery/villa-2.jpg",
+        "alt": "Indoor swimming pool"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-3-thumb.jpg",
+        "full": "/images/gallery/villa-3.jpg",
+        "alt": "Spacious living room"
+      }
+    ]
   }
 }

@@ -19,7 +19,11 @@ interface GuestReservationPageProps {
 }
 
 export async function generateMetadata({ params }: GuestReservationPageProps): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+  
+  const dict = await getDictionary(lang);
   
   return {
     title: 'Accès Invité - Villa Aviv',
@@ -28,12 +32,16 @@ export async function generateMetadata({ params }: GuestReservationPageProps): P
 }
 
 export default async function GuestReservationPage({ params }: GuestReservationPageProps) {
-  const dict = await getDictionary(params.lang);
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+  
+  const dict = await getDictionary(lang);
   
   return (
     <div className="container py-10">
       <h1 className="text-3xl font-bold mb-6">Accès Invité</h1>
-      <GuestReservationAccess lang={params.lang} />
+      <GuestReservationAccess lang={lang} />
     </div>
   );
 }

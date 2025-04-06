@@ -1,3 +1,9 @@
+import { Navbar } from "@/components/navbar"
+import { Gallery } from "react-photoswipe-gallery"
+import 'photoswipe/dist/photoswipe.css'
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import Image from "next/image"
+import { getDictionary } from "@/lib/dictionary"
 
 // Cette fonction est requise pour la génération statique avec des routes dynamiques
 export function generateStaticParams() {
@@ -8,14 +14,6 @@ export function generateStaticParams() {
     { lang: 'de' }
   ];
 }
-"use client"
-
-import { Navbar } from "@/components/navbar"
-import { Gallery } from "react-photoswipe-gallery"
-import 'photoswipe/dist/photoswipe.css'
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import Image from "next/image"
-import { getDictionary } from "@/lib/dictionary"
 
 export default async function GaleriePage({
   params: { lang }
@@ -39,7 +37,7 @@ export default async function GaleriePage({
 
           <Gallery>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {dict.gallery.images.map((image, index) => (
+              {dict.gallery.images.map((image: { thumbnail: string; full: string; alt: string }, index: number) => (
                 <div
                   key={index}
                   className="group relative cursor-zoom-in overflow-hidden rounded-lg"

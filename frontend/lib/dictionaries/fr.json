@@ -3,7 +3,13 @@
     "back_to_home": "Retour à l'accueil",
     "loading": "Chargement...",
     "error": "Erreur",
-    "success": "Succès"
+    "success": "Succès",
+    "view_properties": "Voir nos propriétés",
+    "learn_more": "En savoir plus"
+  },
+  "home": {
+    "hero_description": "Une sélection de propriétés exceptionnelles pour vos séjours.",
+    "features_title": "Nos Prestations"
   },
   "navbar": {
     "home": "Accueil",
@@ -75,5 +81,26 @@
     "no_reservations_desc": "Aucune réservation n'a été trouvée pour cet email.",
     "reservations_for": "Réservations pour",
     "logout": "Se déconnecter"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "description": "Découvrez notre collection d'images de nos propriétés exceptionnelles",
+    "images": [
+      {
+        "thumbnail": "/images/gallery/villa-1-thumb.jpg",
+        "full": "/images/gallery/villa-1.jpg",
+        "alt": "Vue extérieure de la villa"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-2-thumb.jpg",
+        "full": "/images/gallery/villa-2.jpg",
+        "alt": "Piscine intérieure"
+      },
+      {
+        "thumbnail": "/images/gallery/villa-3-thumb.jpg",
+        "full": "/images/gallery/villa-3.jpg",
+        "alt": "Salon spacieux"
+      }
+    ]
   }
 }

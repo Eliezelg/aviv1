@@ -16,7 +16,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+  
+  const dict = await getDictionary(lang);
   
   return {
     title: 'Villa Aviv - Location de propriétés exceptionnelles',
@@ -40,12 +44,16 @@ async function HomeWithConfig({ lang }: { lang: string }) {
   }
 }
 
-export default function HomePage({ params }: { params: { lang: string } }) {
+export default async function HomePage({ params }: { params: { lang: string } }) {
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+  
   return (
     <Suspense fallback={<div className="flex justify-center items-center min-h-[400px]">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
     </div>}>
-      <HomeWithConfig lang={params.lang} />
+      <HomeWithConfig lang={lang} />
     </Suspense>
   );
 }

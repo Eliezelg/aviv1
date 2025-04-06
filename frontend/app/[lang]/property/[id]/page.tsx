@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import PropertyDetail from '@/components/property/PropertyDetail';
 import { getDictionary } from '@/lib/dictionary';
+import { Navbar } from "@/components/navbar";
 
 // Cette fonction est requise pour la génération statique avec des routes dynamiques
 export async function generateStaticParams() {
@@ -32,7 +33,7 @@ export async function generateStaticParams() {
     const langs = ['fr', 'en', 'de'];
     
     return langs.flatMap(lang => 
-      propertyIds.map(id => ({
+      propertyIds.map((id: string) => ({
         lang,
         id
       }))
@@ -43,7 +44,7 @@ export async function generateStaticParams() {
     const ids = ['123445678', 'villa-mediterranee', 'chalet-alpin', 'appartement-parisien'];
     
     return langs.flatMap(lang => 
-      ids.map(id => ({
+      ids.map((id: string) => ({
         lang,
         id
       }))
@@ -58,10 +59,16 @@ interface PropertyPageProps {
   };
 }
 
-export async function generateMetadata({ params }: PropertyPageProps): Promise<Metadata> {
+export async function generateMetadata({ 
+  params 
+}: PropertyPageProps): Promise<Metadata> {
+  // Await the entire params object before destructuring
+  const resolvedParams = await params;
+  const { id } = resolvedParams;
+  
   try {
     // Récupérer les détails de la propriété pour le titre de la page
-    const response = await fetch(`http://localhost:5000/api/property/${params.id}`);
+    const response = await fetch(`http://localhost:5000/api/property/${id}`);
     const property = await response.json();
     
     return {
@@ -77,20 +84,30 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
 }
 
 export default async function PropertyPage({ params }: PropertyPageProps) {
-  const dict = await getDictionary(params.lang);
+  // Await the params object before using its properties
+  const resolvedParams = await params;
+  const { lang, id } = resolvedParams;
+  
+  const dict = await getDictionary(lang);
   
   return (
-    <div className="container py-10">
-      <div className="mb-6">
-        <Link href={`/${params.lang}`}>
-          <Button variant="ghost" className="gap-2">
-            <ArrowLeft size={16} />
-            {dict.common.back_to_home}
-          </Button>
-        </Link>
+    <div>
+      <div className="container py-4">
+        <Navbar lang={lang} propertyId={id} />
       </div>
       
-      <PropertyDetail propertyId={params.id} lang={params.lang} />
+      <div className="container py-10">
+        <div className="mb-6">
+          <Link href={`/${lang}`}>
+            <Button variant="ghost" className="gap-2">
+              <ArrowLeft size={16} />
+              {dict.common.back_to_home}
+            </Button>
+          </Link>
+        </div>
+        
+        <PropertyDetail propertyId={id} lang={lang} />
+      </div>
     </div>
   );
 }

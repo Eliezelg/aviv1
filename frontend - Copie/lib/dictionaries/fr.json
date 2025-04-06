@@ -1,0 +1,85 @@
+{
+  "common": {
+    "back_to_home": "Retour à l'accueil",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "view_properties": "Voir nos propriétés",
+    "learn_more": "En savoir plus"
+  },
+  "home": {
+    "hero_description": "Une sélection de propriétés exceptionnelles pour vos séjours.",
+    "features_title": "Nos Prestations"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "properties": "Propriétés",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "my_reservations": "Mes réservations",
+    "the_villa": "La Villa",
+    "rooms": "Chambres",
+    "amenities": "Équipements",
+    "activities": "Activités"
+  },
+  "property": {
+    "available": "Disponible",
+    "unavailable": "Non disponible",
+    "capacity": "Capacité",
+    "price_per_night": "€ / nuit",
+    "description": "Description",
+    "amenities": "Équipements",
+    "book_now": "Réserver maintenant",
+    "view_details": "Voir les détails",
+    "no_properties": "Aucune propriété disponible",
+    "no_properties_desc": "Aucune propriété n'est actuellement disponible.",
+    "special_requests": "Demandes spéciales",
+    "nights": "nuit(s)",
+    "persons": "personne(s)",
+    "total_price": "Prix total",
+    "deposit": "Acompte",
+    "paid": "Payé",
+    "pending": "En attente"
+  },
+  "reservation": {
+    "book_property": "Réserver",
+    "complete_form": "Complétez le formulaire ci-dessous pour effectuer votre réservation",
+    "reservation_details": "Détails de la réservation",
+    "dates": "Dates",
+    "guests": "Voyageurs",
+    "confirmation_code": "Code de confirmation",
+    "reservation_confirmed": "Réservation confirmée !",
+    "payment_failed": "Paiement échoué",
+    "reservation_pending": "Réservation en attente de paiement",
+    "confirmed_description": "Votre réservation a été enregistrée avec succès et votre acompte a été payé.",
+    "failed_description": "Le paiement de votre acompte a échoué. Veuillez réessayer.",
+    "pending_description": "Votre réservation a été enregistrée mais est en attente du paiement de l'acompte.",
+    "reference": "Référence",
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "cancelled": "Annulée",
+      "completed": "Terminée"
+    },
+    "email_sent": "Un email de confirmation a été envoyé à votre adresse email. Vous pouvez également consulter vos réservations à tout moment en utilisant votre email et code de confirmation.",
+    "pay_deposit": "Payer l'acompte",
+    "view_my_reservations": "Voir mes réservations",
+    "back_to_home": "Retour à l'accueil",
+    "cancel_reservation": "Annuler",
+    "reservation_cancelled": "Réservation annulée",
+    "reservation_cancelled_desc": "Votre réservation a été annulée avec succès"
+  },
+  "guest_access": {
+    "title": "Accéder à vos réservations",
+    "description": "Entrez votre email et le code de confirmation reçu lors de votre réservation",
+    "email": "Email",
+    "email_hint": "Votre adresse email",
+    "confirmation_code": "Code de confirmation",
+    "code_hint": "Vous avez reçu ce code par email lors de votre réservation",
+    "access_button": "Accéder à mes réservations",
+    "no_reservations": "Aucune réservation",
+    "no_reservations_desc": "Aucune réservation n'a été trouvée pour cet email.",
+    "reservations_for": "Réservations pour",
+    "logout": "Se déconnecter"
+  }
+}
